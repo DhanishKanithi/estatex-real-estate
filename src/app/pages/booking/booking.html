@@ -1,0 +1,60 @@
+<section class="booking-page" *ngIf="property">
+
+  <!-- Property Summary -->
+  <div class="property-card">
+    <img [src]="property.image" alt="property" />
+    <div class="info">
+      <h2>{{ property.title }}</h2>
+      <p>{{ property.location }}</p>
+      <span class="price">{{ property.price }}</span>
+    </div>
+  </div>
+
+  <!-- Booking Form -->
+  <div class="form-card">
+    <h3>Book Property Visit</h3>
+
+    <form [formGroup]="bookingForm" (ngSubmit)="submitBooking()">
+
+      <div class="field">
+        <label>Full Name</label>
+        <input type="text" formControlName="fullName" />
+        <small *ngIf="bookingForm.get('fullName')?.touched && bookingForm.get('fullName')?.invalid">
+          Name must be at least 3 characters
+        </small>
+      </div>
+
+      <div class="field">
+        <label>Email</label>
+        <input type="email" formControlName="email" />
+        <small *ngIf="bookingForm.get('email')?.touched && bookingForm.get('email')?.invalid">
+          Enter a valid email
+        </small>
+      </div>
+
+      <div class="field">
+        <label>Phone</label>
+        <input type="text" formControlName="phone" />
+        <small *ngIf="bookingForm.get('phone')?.touched && bookingForm.get('phone')?.invalid">
+          Enter 10 digit phone number
+        </small>
+      </div>
+
+      <div class="field">
+        <label>Preferred Visit Date</label>
+        <input type="date" formControlName="visitDate" />
+      </div>
+
+      <div class="field">
+        <label>Message (Optional)</label>
+        <textarea rows="3" formControlName="message"></textarea>
+      </div>
+
+      <button type="submit">
+        Confirm Booking
+      </button>
+
+    </form>
+  </div>
+
+</section>

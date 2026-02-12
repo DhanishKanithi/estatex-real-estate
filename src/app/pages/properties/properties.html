@@ -1,0 +1,15 @@
+<section class="properties">
+  <h2>Available Properties</h2>
+
+  <div class="grid">
+    <div class="card"
+     *ngFor="let p of properties"
+     [routerLink]="['/property', p.id]">
+
+      <img [src]="p.image" alt="property" />
+      <h3>{{ p.title }}</h3>
+      <p>{{ p.location }}</p>
+      <span>{{ p.price }}</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,127 @@
+.auth-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 900px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  animation: fadeUp 0.8s ease;
+}
+
+/* Left info section */
+.auth-info {
+  padding: 3rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-info h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.auth-info p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Right form section */
+.auth-form {
+  padding: 3rem;
+  background: #ffffff;
+}
+
+.auth-form h2 {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 1.3rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #0072ff;
+  box-shadow: 0 0 0 3px rgba(0, 114, 255, 0.15);
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #ffffff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 114, 255, 0.4);
+}
+
+/* Toggle */
+.toggle-text {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.toggle-text span {
+  color: #0072ff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .auth-card {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-info {
+    display: none;
+  }
+}

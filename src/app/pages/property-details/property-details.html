@@ -1,0 +1,38 @@
+<section class="property-details">
+
+  <!-- Hero Image -->
+  <div class="hero" [style.backgroundImage]="'url(' + property.image + ')'">
+    <div class="overlay">
+      <h1>{{ property.title }}</h1>
+      <p>{{ property.location }}</p>
+    </div>
+  </div>
+
+  <!-- Details Card -->
+  <div class="details-card">
+
+    <div class="price">
+      {{ property.price }}
+    </div>
+
+    <p class="description">
+      {{ property.description }}
+    </p>
+
+    <div class="features">
+      <span>🏠 3 Bedrooms</span>
+      <span>🛁 2 Bathrooms</span>
+      <span>🚗 Parking</span>
+      <span>📐 1450 sq.ft</span>
+    </div>
+
+    <a
+      class="book-btn"
+      [routerLink]="['/booking', property.id]"
+    >
+      Book Now
+    </a>
+
+  </div>
+
+</section>

@@ -1,0 +1,26 @@
+<section class="hero">
+  <div class="hero-overlay"></div>
+
+  <div
+    class="hero-card"
+    (mousemove)="onMove($event)"
+    (mouseleave)="onLeave()"
+    [style.transform]="cardTransform"
+  >
+    <h1>Find Your Dream Home</h1>
+    <p>
+      Luxury properties · Trusted agents · Best prices
+    </p>
+
+    <div class="cta-group">
+  <a routerLink="/properties" class="primary-btn">
+    Explore Properties
+  </a>
+
+  <a routerLink="/login" class="secondary-btn">
+    Login
+  </a>
+</div>
+
+  </div>
+</section>

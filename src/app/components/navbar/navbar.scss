@@ -1,0 +1,98 @@
+.navbar {
+  height: 80px;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 100;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  cursor: pointer;
+
+  span {
+    color: #6a00ff;
+  }
+}
+
+/* Desktop Menu */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+
+  a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #333;
+  }
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 90;
+}
+
+/* Mobile Slide Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 260px;
+  height: 100vh;
+  background: #ffffff;
+  padding: 6rem 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: right 0.35s ease;
+  z-index: 100;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+}
+
+/* 📱 Mobile View */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

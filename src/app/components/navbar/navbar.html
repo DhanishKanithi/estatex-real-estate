@@ -1,0 +1,30 @@
+<nav class="navbar">
+  <!-- Logo -->
+  <div class="logo" routerLink="/">
+    <span>Estate</span>X
+  </div>
+
+  <!-- Hamburger -->
+  <div class="hamburger" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" *ngIf="menuOpen" (click)="closeMenu()"></div>
+
+  <!-- Slide Menu -->
+  <ul class="mobile-menu" [class.open]="menuOpen">
+    <li><a routerLink="/" (click)="closeMenu()">Home</a></li>
+    <li><a routerLink="/properties" (click)="closeMenu()">Properties</a></li>
+    <li><a routerLink="/login" (click)="closeMenu()">Login</a></li>
+  </ul>
+
+  <!-- Desktop Menu -->
+  <ul class="nav-links">
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/properties">Properties</a></li>
+    <li><a routerLink="/login">Login</a></li>
+  </ul>
+</nav>
